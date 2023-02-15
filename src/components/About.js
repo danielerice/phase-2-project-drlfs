@@ -1,6 +1,5 @@
 import React, {useEffect} from "react";
 import { Container, Form } from "semantic-ui-react";
-import Event from "./Event";
 
 
 const itemStyle = { marginTop: `1.4em` }
