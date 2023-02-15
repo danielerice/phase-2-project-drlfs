@@ -11,7 +11,7 @@ const formStyle = {
 
 
 
-function Admin ({ isLoggedIn, setIsLoggedIn}) {
+function Admin ({ isLoggedIn, setIsLoggedIn, events, setEvents}) {
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
     const [eventDate, setEventDate] = useState("")
@@ -20,7 +20,7 @@ function Admin ({ isLoggedIn, setIsLoggedIn}) {
     const [eventTitle, setEventTitle] = useState("")
     const [eventDescription, setEventDesciption] = useState("")
     const [users, setUsers] = useState([])
-    const [events, setEvents] = useState([])
+    
 
     function handleLogin(event) {
         
@@ -37,6 +37,7 @@ function Admin ({ isLoggedIn, setIsLoggedIn}) {
       }
 
     function addUser(event) {
+        event.preventDefault()
         const id = (users.length+1)
         const userData = {
             "id": id,
@@ -54,6 +55,7 @@ function Admin ({ isLoggedIn, setIsLoggedIn}) {
       }
 
       function handleEvent(event) {
+        event.preventDefault()
         const id = (events.length+1)
         const eventData = {
             "id": id,
@@ -78,11 +80,7 @@ function Admin ({ isLoggedIn, setIsLoggedIn}) {
             .then(data => setUsers(data))
         }, []);
 
-    useEffect (() => {
-        fetch("http://localhost:3000/events")
-            .then(response => response.json())
-            .then(data => setEvents(data))
-        }, []);
+    
 
 
         if(isLoggedIn===true) {

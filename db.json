@@ -21,6 +21,22 @@
       "start": "17:00",
       "end": "00:00",
       "date": "2023-11-14"
+    },
+    {
+      "id": 3,
+      "title": "Noah's B-Day",
+      "description": "Come Celebrate!!!",
+      "start": "17:00",
+      "end": "22:00",
+      "date": "2023-12-21"
+    },
+    {
+      "id": 4,
+      "title": "X-mas Party",
+      "description": "Come celebrate X-mas with noodles!!!",
+      "start": "17:00",
+      "end": "22:00",
+      "date": "2023-12-25"
     }
   ],
   "Users": [
