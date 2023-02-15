@@ -1,9 +1,12 @@
 import React from "react";
 
+const aboutStyle = { marginTop: `20em` }
 
 function Menu () {
     return (
-    <div>{'Menu'}</div>
+    <div style={aboutStyle} className="ui center aligned huge image">
+        <img src="DinnerMenu.jpg" alt="Dinner Menu"/>
+    </div>
     );
 }
 
